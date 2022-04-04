@@ -1,5 +1,6 @@
 import React from 'react';
 import ScoreBoard from './scoreBoard';
+import UserSelection from './userSelection';
 class Game extends React.Component {
     constructor(props) {
         super(props);
@@ -8,15 +9,27 @@ class Game extends React.Component {
                 wins: 0,
                 ties: 0,
                 losses: 0,
+
             },
+            choices: ["Rock", "Paper", "Scissors"],
+            selection: '',
             name: "Colton"
         }
     }
+    handleClick = (selection) => {
+        const user_selection = selection;
+        this.setState({ selection: user_selection })
+    }
     render() {
         return (
-            <ScoreBoard
-                score={this.state.score}
-            />
+            <div>
+                <ScoreBoard
+                    score={this.state.score}
+                />
+                <UserSelection
+                    choices={this.state.choices}
+                    sendData={this.handleClick} />
+            </div>
         );
     }
 
