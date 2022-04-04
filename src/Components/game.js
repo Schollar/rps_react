@@ -1,6 +1,7 @@
 import React from 'react';
 import ScoreBoard from './scoreBoard';
 import UserSelection from './userSelection';
+import CompSelection from './compSelection';
 class Game extends React.Component {
     constructor(props) {
         super(props);
@@ -29,6 +30,7 @@ class Game extends React.Component {
                 <UserSelection
                     choices={this.state.choices}
                     sendData={this.handleClick} />
+                <CompSelection></CompSelection>
             </div>
         );
     }

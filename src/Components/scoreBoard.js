@@ -1,5 +1,5 @@
 import React from 'react';
-import './scoreBoard.css';
+import '../Css/scoreBoard.css'
 
 // Scoreboard component accepts props from the parent(game compoenent)
 // Then Display the information as h1s in a div
