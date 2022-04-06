@@ -3,7 +3,8 @@ import React from 'react';
 
 class UserSelection extends React.Component {
     user_selection(arg) {
-        this.props.sendData(arg)
+        this.props.sendData(arg);
+        this.props.compTurn();
     };
     render() {
         return (
