@@ -8,7 +8,6 @@ import Game from './Components/game'
 ReactDOM.render(
   <React.StrictMode>
     <Game />
-    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
