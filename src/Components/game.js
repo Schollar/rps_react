@@ -2,6 +2,7 @@ import React from 'react';
 import ScoreBoard from './scoreBoard';
 import UserSelection from './userSelection';
 import CompSelection from './compSelection';
+import '../Css/game.css'
 class Game extends React.Component {
     constructor(props) {
         super(props);
@@ -84,13 +85,17 @@ class Game extends React.Component {
                 <ScoreBoard
                     score={this.state.score}
                 />
-                <p>Result: {this.state.result}</p>
+                <p class="result">Result: {this.state.result}</p>
                 {/* Passing Choices as a prop to userselection, and passing a custom prop to handle the button clicks */}
-                <UserSelection
-                    choices={this.state.choices}
-                    sendData={this.handleClick}
-                />
-                <CompSelection selection={this.state.comp_selection}></CompSelection>
+                <div class="selection_container">
+                    <UserSelection
+                        choices={this.state.choices}
+                        sendData={this.handleClick}
+                    />
+                    <CompSelection selection={this.state.comp_selection}></CompSelection>
+                </div>
+                <div>
+                </div>
             </div>
         );
     }

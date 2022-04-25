@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Css/userSelection.css'
 
 
 class UserSelection extends React.Component {
@@ -7,10 +8,14 @@ class UserSelection extends React.Component {
     };
     render() {
         return (
-            <section className="button_container">
-                {this.props.choices.map(choice => (
-                    <button onClick={(e) => this.user_selection(choice.name)}><img height="25px" alt={choice.alt} src={choice.imageUrl} /></button>))}
-            </section>
+
+            <div class="user_selection_container">
+                <p>Make your choice: </p>
+                <section className="button_container">
+                    {this.props.choices.map(choice => (
+                        <button onClick={(e) => this.user_selection(choice.name)}><img height="25px" alt={choice.alt} src={choice.imageUrl} /></button>))}
+                </section>
+            </div>
 
         );
     }

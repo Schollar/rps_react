@@ -1,0 +1,10 @@
+.result {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+}
+
+.selection_container {
+    display: grid;
+    grid-auto-flow: column;
+}

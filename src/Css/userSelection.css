@@ -1,0 +1,10 @@
+.button_container {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 50px 50px 50px;
+    margin-left: 10%;
+}
+
+.user_selection_container {
+    margin-left: 10%;
+}
